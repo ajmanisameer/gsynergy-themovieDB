@@ -16,7 +16,7 @@
     I want the app to be responsive and usable on screens with a minimum width of 512 pixels.
 
 1. Create a new React project using Create React App
-2. Set up Redux and React Router for state management and routing.
+2. Set up Redux and React Router for state management and routing. 
 3. Create the following components:
     MovieCard: Renders a single movie card with title, rating, description, and an image.
     MovieList: Renders a list of MovieCards with infinite scrolling support.
