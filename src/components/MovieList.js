@@ -4,6 +4,7 @@ import { fetchUpcomingMovies, searchMovies } from "../store/actions";
 import { Link } from "react-router-dom";
 import SearchBar from './SearchBar';
 import MovieCard from "./MovieCard";
+import Navbar from "./Navbar";
 
 const MovieList = ({
   upcomingMovies,
@@ -20,10 +21,10 @@ const MovieList = ({
   };
 
   return (
-    <div>
-      <SearchBar onSearch={handleSearch} />
+    <div className="container mx-auto py-8">
+      {/* <SearchBar onSearch={handleSearch} /> */}
 
-      <div className="movie-list">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {searchResults.length > 0
           ? // If there are search results, render them
             searchResults.map((movie) => (

@@ -19,7 +19,6 @@ const MovieDetails = ({ movie, fetchMovieDetails }) => {
       <h1>{movie.title}</h1>
       <p>Rating: {movie.vote_average}</p>
       <p>{movie.overview}</p>
-      {/* Add more details here */}
     </div>
   );
 };
