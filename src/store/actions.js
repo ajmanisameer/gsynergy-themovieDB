@@ -2,7 +2,8 @@
 import axios from 'axios';
 import { FETCH_UPCOMING_MOVIES, SEARCH_MOVIES, FETCH_MOVIE_DETAILS } from './actionTypes';
 
-const API_KEY = process.env.REACT_APP_TMDB_API_KEY; //  TMDb API key
+// const API_KEY = process.env.REACT_APP_TMDB_API_KEY; //  TMDb API key
+const API_KEY = "777f1d257e712abbdee0192f77ac96a5"
 
 export const fetchUpcomingMovies = () => async (dispatch) => {
 
