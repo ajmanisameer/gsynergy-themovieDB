@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchUpcomingMovies, searchMovies } from "../store/actions";
+import { Link } from "react-router-dom";
+import SearchBar from './SearchBar';
 
 const MovieList = ({
   upcomingMovies,
@@ -18,21 +20,34 @@ const MovieList = ({
 
   return (
     <div>
-      <h1>Upcoming Movies</h1>
-      {/* SearchBar component */}
+      <SearchBar onSearch={handleSearch} />
 
       <div className="movie-list">
-        {searchResults.length > 0 ? (
-          // If there are search results, render them
-          searchResults.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))
-        ) : (
-          // Otherwise, render upcoming movies
-          upcomingMovies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))
-        )}
+        {searchResults.length > 0
+          ? // If there are search results, render them
+            searchResults.map((movie) => (
+              <Link
+                to={{
+                  pathname: `/movie/${movie.id}`,
+                  state: { movie }, // Pass the entire movie object in the state
+                }}
+                key={movie.id}
+              >
+                <MovieCard movie={movie} />
+              </Link>
+            ))
+          : // Otherwise, render upcoming movies
+            upcomingMovies.map((movie) => (
+              <Link
+                to={{
+                  pathname: `/movie/${movie.id}`,
+                  state: { movie }, // Pass the entire movie object in the state
+                }}
+                key={movie.id}
+              >
+                <MovieCard movie={movie} />
+              </Link>
+            ))}
       </div>
     </div>
   );
@@ -47,13 +62,13 @@ export default connect(mapStateToProps, { fetchUpcomingMovies, searchMovies })(
   MovieList
 );
 
-
-
-
 function MovieCard({ movie }) {
   return (
     <div className="movie-card">
-      <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+      <img
+        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+        alt={movie.title}
+      />
       <h2>{movie.title}</h2>
       <p>Rating: {movie.vote_average}</p>
       <p>{movie.overview}</p>
