@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchUpcomingMovies, searchMovies } from "../store/actions";
 import { Link } from "react-router-dom";
 import SearchBar from './SearchBar';
+import MovieCard from "./MovieCard";
 
 const MovieList = ({
   upcomingMovies,
@@ -62,16 +63,3 @@ export default connect(mapStateToProps, { fetchUpcomingMovies, searchMovies })(
   MovieList
 );
 
-function MovieCard({ movie }) {
-  return (
-    <div className="movie-card">
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-        alt={movie.title}
-      />
-      <h2>{movie.title}</h2>
-      <p>Rating: {movie.vote_average}</p>
-      <p>{movie.overview}</p>
-    </div>
-  );
-}
