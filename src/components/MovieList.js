@@ -22,7 +22,6 @@ const MovieList = ({
 
   return (
     <div className="container mx-auto py-8">
-      {/* <SearchBar onSearch={handleSearch} /> */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {searchResults.length > 0
