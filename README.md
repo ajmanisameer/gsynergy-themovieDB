@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Movie Browser Web App
+
+## Instructions
+
+To run this web app locally, follow these steps:
+
+1. Clone this GitHub repository to your local machine.
+2. Install the required dependencies using `npm install` or `yarn install`.
+3. Create a `.env` file at the root of the project with your TMDb API key:
+    REACT_APP_TMDB_API_KEY=YOUR_TMDB_API_KEY_HERE
+    Replace `YOUR_TMDB_API_KEY_HERE` with your actual TMDb API key.
+4. Start the development server with `npm start` or `yarn start`.
+5. Open your web browser and navigate to `http://localhost:3000` to access the app.
+
+To test the code, you can run unit tests using `npm test` or `yarn test`.
 
 
-## Available Scripts
+## Proficiency Elements
 
-In the project directory, you can run:
+### React Components
+I've structured the app using React components, separating different parts of the UI into reusable components, Each component serves a specific purpose, making the codebase easier to understand and maintain. building modular and maintainable code.
 
-### `npm install`
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Redux State Management
+I've integrated Redux for state management, which helps in efficiently managing the application's data flow and ensures a consistent user experience also ensuring a predictable and centralized way of managing data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Routing with React Router
+The app uses React Router for navigation between pages, allowing users to browse movie details seamlessly.
 
-### `npm test`
+### Unit Testing**
+The codebase is accompanied by unit tests to ensure code quality and maintainability. These tests cover critical functionalities and showcase my proficiency in writing testable code and ensuring the reliability of the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Improvements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If I had an additional 4 hours for this task, I would focus on the following improvements:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Enhanced Error Handling**: I would enhance error handling in the code to provide more informative error messages to users in case of network issues or API errors. This would improve the overall user experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Pagination for Movie List**: Implement pagination for the movie list instead of infinite scrolling. This would provide better control over loading large amounts of data.
 
-### `npm run eject`
+3. **Unit Test Coverage**: Expand the unit test coverage to ensure robust code quality and maintainability.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Accessibility**: Improve accessibility by adding appropriate ARIA roles and labels to ensure the app is usable by individuals with disabilities.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Feedback
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Overall, this challenge is a great way to assess a candidate's proficiency in React and related technologies. To further improve this challenge, you might consider providing more specific requirements for certain aspects of the app, such as accessibility or performance, to allow candidates to demonstrate expertise in those areas.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Maybe Include a section in the challenge that encourages candidates to discuss how they would scale the app for larger datasets or user bases, demonstrating their understanding of scalability and performance optimization.
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The app has been deployed to [Varcel](https://vercel.com/) and is accessible at [Movie Browser Web App](https://gsynergy-themovie-db.vercel.app/). 

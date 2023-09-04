@@ -44,7 +44,14 @@ const MovieDetails = ({ movie, fetchMovieDetails }) => {
           <h1 className="text-2xl font-bold">{movie.title}</h1>
           <p className="text-lg">Rating: {movie.vote_average}</p>
 
-          {/* Cast */}
+          <p className="text-lg">
+            Year of Release: {movie.release_date.slice(0, 4)}
+          </p>
+          <p className="text-lg">
+            Length: {Math.floor(movie.runtime / 60)}h {movie.runtime % 60}min
+          </p>
+          <p className="text-lg">Director: {movie.director}</p>
+
           <div className="mt-4">
             <h2 className="text-xl font-semibold">Cast:</h2>
             {/* <p>{movie.cast.join(', ')}</p> */}
