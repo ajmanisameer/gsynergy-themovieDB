@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, combineReducers } from 'redux';
-import thunkMiddleware from 'redux-thunk'; // perform asynchronous actions
+import thunkMiddleware from 'redux-thunk'; 
 
 // Import your reducers here
 import movieReducer from './reducers'; // Import your movieReducer or any other reducers you have
