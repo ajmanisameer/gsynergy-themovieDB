@@ -4,6 +4,7 @@ import {
   FETCH_UPCOMING_MOVIES,
   SEARCH_MOVIES,
   FETCH_MOVIE_DETAILS,
+  FETCH_ERROR,
 } from "./actionTypes";
 
 // const API_KEY = process.env.REACT_APP_TMDB_API_KEY; //  TMDb API key
